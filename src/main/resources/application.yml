@@ -41,9 +41,9 @@ spring:
       max-request-size: 10GB
       max-file-size: 10GB
   datasource:
-    url: jdbc:postgresql://localhost:5432/foknje7ikdb
+    url: jdbc:postgresql://localhost:5432/mindpathdb
     username: postgres
-    password: root
+    password: wAzzA?Foknjehik
     driver-class-name: org.postgresql.Driver
     hikari:
       minimum-idle: 5
