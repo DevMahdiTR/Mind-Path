@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ../../../
+      dockerfile: Dockerfile
+    container_name: foknje7ik_container
+    image: foknje7ik:latest
+    ports:
+      - "8081:8081"
+
+    environment:
+      SPRING_DATASOURCE_URL: ${DB_URL}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+
+      SPRING_MAIL_HOST: ${MAIL_HOST}
+      SPRING_MAIL_PORT: ${MAIL_PORT}
+      SPRING_MAIL_USERNAME: ${MAIL_USERNAME}
+      SPRING_MAIL_PASSWORD: ${MAIL_PASSWORD}
+
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET}
+      JWT_CONFIRMATION_SECRET: ${JWT_CONFIRMATION_SECRET}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
+
+      CONFIRMATION_JWT_EXPIRATION: ${CONFIRMATION_JWT_EXPIRATION}
+      ACCESS_JWT_EXPIRATION: ${ACCESS_JWT_EXPIRATION}
+      REFRESH_JWT_EXPIRATION: ${REFRESH_JWT_EXPIRATION}
+    depends_on:
+      - db
+    restart: always
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5434:5432"
+    container_name:
+      postgres_container_foknje7ik
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart:
+        always
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:

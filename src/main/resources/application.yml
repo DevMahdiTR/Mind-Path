@@ -1,0 +1,73 @@
+server:
+  tomcat:
+    connection-timeout: 60000
+    max-swallow-size: 2MB
+  servlet:
+      session:
+        timeout: 30
+      context-parameters:
+        buffer-size: 32768
+#
+#  ssl:
+#    key-store: /etc/letsencrypt/live/devfoknje7ik.com/keystore.p12
+#    key-store-password: wAzzAwAzzA
+#    key-store-type: PKCS12
+#    key-alias: spring-boot
+
+spring:
+  application:
+    name: foknje7ik
+  profiles:
+    active: dev
+  cloud:
+    azure:
+      storage:
+        blob:
+          connection-string: "DefaultEndpointsProtocol=https;AccountName=foknje7ik;AccountKey=HFhLHjm16xASlmAd+lcmNnO8b/cZjZjSMqJ/OhfchaedvvcOetQDhFSqGzsCl74sGuKUTsQjJiwX+AStCJERnA==;EndpointSuffix=core.windows.net"
+          container-name: foknje7ikblob
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: foknjeikacademy@gmail.com
+    password: mzif wyon jkum ecfr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  servlet:
+    multipart:
+      max-request-size: 10GB
+      max-file-size: 10GB
+  datasource:
+    url: jdbc:postgresql://localhost:5432/foknje7ikdb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 30000
+      maximum-pool-size: 20
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
+    baseline-description: "Initial version"
+    baseline-version: 0
+    locations: classpath:db/migration
