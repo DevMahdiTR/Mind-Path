@@ -134,8 +134,8 @@ Subscription Panel: Handle subscription fees and user payments.
 AI Assistance: Get personalized guidance on courses and features.
 
 5. Demo
-Live Demo: https://drive.google.com/file/d/1wosQimZ7lWeE9A1cjQIpSu5EJvNbf-SD/view?usp=sharing
-   https://drive.google.com/file/d/1qxcLr2udcWZnhUogkwHhxXOMNIvYfws9/view?usp=sharing
+Live Demo1 : https://drive.google.com/file/d/1wosQimZ7lWeE9A1cjQIpSu5EJvNbf-SD/view?usp=sharing
+Live Demo 2: https://drive.google.com/file/d/1qxcLr2udcWZnhUogkwHhxXOMNIvYfws9/view?usp=sharing
 front hosted : https://mindpath-front.vercel.app/
 backend hoster url : https://51.91.96.132:8083/api/v1
 
