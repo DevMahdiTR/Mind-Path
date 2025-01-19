@@ -7,12 +7,12 @@ server:
         timeout: 30
       context-parameters:
         buffer-size: 32768
-#
-#  ssl:
-#    key-store: /etc/letsencrypt/live/devfoknje7ik.com/keystore.p12
-#    key-store-password: wAzzAwAzzA
-#    key-store-type: PKCS12
-#    key-alias: spring-boot
+
+  ssl:
+    key-store: /etc/letsencrypt/live/devfoknje7ik.com/keystore.p12
+    key-store-password: wAzzAwAzzA
+    key-store-type: PKCS12
+    key-alias: spring-boot
 
 spring:
   application:

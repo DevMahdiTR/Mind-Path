@@ -172,7 +172,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("https://foknje7ik.com", "https://www.foknje7ik.com", "http://localhost:3000"));
+        configuration.setAllowedOrigins(List.of("https://foknje7ik.com", "https://www.foknje7ik.com", "http://localhost:3000","https://mindpath-front.vercel.app","https://mindpath-front-58tr6o811-mahdis-projects-84b5a5ae.vercel.app"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
         configuration.setAllowCredentials(true);
