@@ -9,7 +9,7 @@ VALUES (1, 'ROLE_ADMIN'),
 
 
 INSERT INTO users (id, full_name, phone_number, email, password, is_enabled, governoarate, birthday, created_at, updated_at, role_id,user_type)
-VALUES  ('36a4dac0-daaa-456e-b030-b71dacea3716', 'Foknje7ik', '22946781', 'medmahdidev@gmail.com', '$2a$10$Su4L9/48L3ZTTi1VUwCwNevVjuhVCftxHCIXmkhYLuNRXB/UhijBa', true, 'TUNIS', '2001-01-01', '2024-01-01 00:00:00', '2024-01-01 00:00:00', 1,'SUPERTEACHER');
+VALUES  ('36a4dac0-daaa-456e-b030-b71dacea3716', 'mindpath', '22946781', 'mindpath@gmail.com', '$2a$10$Su4L9/48L3ZTTi1VUwCwNevVjuhVCftxHCIXmkhYLuNRXB/UhijBa', true, 'TUNIS', '2001-01-01', '2024-01-01 00:00:00', '2024-01-01 00:00:00', 1,'SUPERTEACHER');
 
 INSERT INTO super_teachers(id) VALUES ('36a4dac0-daaa-456e-b030-b71dacea3716');
 
